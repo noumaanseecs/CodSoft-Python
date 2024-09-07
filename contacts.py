@@ -1,4 +1,8 @@
-# contact_book.py
+'''
+This is a contact book created as a part of my internship with CodSoft
+
+The class Contact utilises the constructor to create the contact and the str method is used to print out the added contacts name,phone,email and address
+'''
 
 class Contact:
     def __init__(self, name, phone, email, address):
@@ -13,6 +17,18 @@ class Contact:
                 f"Email: {self.email}\n"
                 f"Address: {self.address}\n")
 
+'''
+The ContactBook is the heart of this code and includes all the functions of this contactbook.
+its functions have following functionalities:
+
+1. The contructor will store the contacts to a dictionary self.contacts.
+2. The add_contacts will add the created contact to the dictionary.
+3. veiw_contact will display the list of contacts stored in the dictionary.
+4. search_contact will locate a contact and display its info.
+5. update_contact will locate the contact to be updates and will allow to change its attributes(or even a single attribute).
+6. delete_contact will remove contact from our list.
+
+'''
 
 class ContactBook:
     def __init__(self):
@@ -55,6 +71,10 @@ class ContactBook:
         else:
             print(f"Contact '{name}' not found.")
 
+'''
+The main function provides the user interface , it will allow user to do his/her desired manupilation.
+The interface uses a simple if else conditional structure
+'''
 
 def main():
     contact_book = ContactBook()
